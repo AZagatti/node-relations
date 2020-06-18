@@ -58,6 +58,8 @@ class CreateProductService {
       products: formattedProducts,
     });
 
+    await this.productsRepository.updateQuantity(products);
+
     return order;
   }
 }
